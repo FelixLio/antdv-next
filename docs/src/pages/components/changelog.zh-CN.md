@@ -2,6 +2,38 @@
 title: 组件更新日志
 ---
 
+## V1.1.4
+
+本次版本主要聚焦于 **补充 Menu / Collapse 的 SFC 用法与主题编辑能力**、**修复 Input.Search 与 TreeSelect 的交互与样式问题**，并进一步 **优化 SSR 表现与升级部分工具链依赖**。同时同步修正文档中的若干渲染和兼容性问题。
+
+**✨ 新功能 Features**
+
+* feat(editor)：使用 antd theme editor 作为主题编辑器 by @ffgenius [#365](https://github.com/antdv-next/antdv-next/pull/365)
+* feat：为 Menu 与 Collapse 补充 SFC 用法支持 by @aibayanyu20 [#366](https://github.com/antdv-next/antdv-next/pull/366)
+
+**🐞 问题修复 Fixes**
+
+* fix：修复 TreeSelect hover 样式问题 by @aibayanyu20 [#362](https://github.com/antdv-next/antdv-next/pull/362)
+* fix：修复 Input.Search 清空时重复触发两次事件的问题 by @aibayanyu20 [#361](https://github.com/antdv-next/antdv-next/pull/361)
+
+**📝 文档更新 Documentation**
+
+* docs(input)：补充 `clearIcon` 插槽文档说明 by @selicens [#355](https://github.com/antdv-next/antdv-next/pull/355)
+* docs：修复 Chrome 低版本浏览器兼容性说明 by @aibayanyu20 [#357](https://github.com/antdv-next/antdv-next/pull/357)
+* docs(table)：修复 Table 文档渲染错误 by @cc-hearts [#363](https://github.com/antdv-next/antdv-next/pull/363)
+* docs(drawer/tabs/time-picker/upload)：修复相关文档渲染错误 by @cc-hearts [#364](https://github.com/antdv-next/antdv-next/pull/364)
+* docs：修复并更新文档内容 by @aibayanyu20 [#367](https://github.com/antdv-next/antdv-next/pull/367)
+
+**🛠 重构与维护 Refactor & Maintenance**
+
+* perf：优化 SSR 性能 by @aibayanyu20 [#356](https://github.com/antdv-next/antdv-next/pull/356)
+* chore：升级 Vite 版本并更新相关依赖 by @cc-hearts [#359](https://github.com/antdv-next/antdv-next/pull/359)
+* chore：升级 Vitest 版本 by @cc-hearts [#360](https://github.com/antdv-next/antdv-next/pull/360)
+
+**Full Changelog**
+https://github.com/antdv-next/antdv-next/compare/antdv-next@1.1.3...antdv-next@1.1.4
+
+
 ## V1.1.3
 
 本次版本主要聚焦于 **修复 Select / Form / InputNumber / Splitter 等组件的行为问题**，并进一步 **同步 Timeline 与 antd 6.3.2 的细节表现**。同时补充了文档站中一键打开 Playground 的能力，便于调试与示例联动查看。

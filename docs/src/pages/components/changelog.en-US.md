@@ -2,6 +2,38 @@
 title: Component Changelog
 ---
 
+## V1.1.4
+
+This release focuses on **adding SFC usage examples for Menu and Collapse together with a theme editor integration**, **fixing interaction and style issues in Input.Search and TreeSelect**, and **improving SSR performance while upgrading parts of the tooling stack**. It also includes several documentation rendering and compatibility fixes.
+
+**✨ Features**
+
+* feat(editor): use antd theme editor by @ffgenius in [#365](https://github.com/antdv-next/antdv-next/pull/365)
+* feat: add SFC usage for Menu and Collapse by @aibayanyu20 in [#366](https://github.com/antdv-next/antdv-next/pull/366)
+
+**🐞 Fixes**
+
+* fix: fix TreeSelect hover style by @aibayanyu20 in [#362](https://github.com/antdv-next/antdv-next/pull/362)
+* fix: fix Input.Search triggering the clear event twice by @aibayanyu20 in [#361](https://github.com/antdv-next/antdv-next/pull/361)
+
+**📝 Documentation**
+
+* docs(input): supplement `clearIcon` slot docs by @selicens in [#355](https://github.com/antdv-next/antdv-next/pull/355)
+* docs: fix compatibility notes for lower Chrome versions by @aibayanyu20 in [#357](https://github.com/antdv-next/antdv-next/pull/357)
+* docs(table): fix Table docs render error by @cc-hearts in [#363](https://github.com/antdv-next/antdv-next/pull/363)
+* docs(drawer/tabs/time-picker/upload): fix render errors in related docs by @cc-hearts in [#364](https://github.com/antdv-next/antdv-next/pull/364)
+* docs: fix and update documentation content by @aibayanyu20 in [#367](https://github.com/antdv-next/antdv-next/pull/367)
+
+**🛠 Refactor & Maintenance**
+
+* perf: improve SSR performance by @aibayanyu20 in [#356](https://github.com/antdv-next/antdv-next/pull/356)
+* chore: bump Vite version and update dependencies by @cc-hearts in [#359](https://github.com/antdv-next/antdv-next/pull/359)
+* chore: bump Vitest version by @cc-hearts in [#360](https://github.com/antdv-next/antdv-next/pull/360)
+
+**Full Changelog**
+https://github.com/antdv-next/antdv-next/compare/antdv-next@1.1.3...antdv-next@1.1.4
+
+
 ## V1.1.3
 
 This release focuses on **fixing behavior issues in Select, Form, InputNumber, and Splitter**, while also **syncing Timeline details with antd 6.3.2**. It also improves the docs site with a direct entry to open demos in Playground for easier debugging and inspection.
