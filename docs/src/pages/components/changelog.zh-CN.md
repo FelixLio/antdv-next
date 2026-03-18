@@ -2,6 +2,42 @@
 title: 组件更新日志
 ---
 
+## V1.1.5
+
+本次版本主要聚焦于 **修复 Select / Layout / Grid / Form / Image 等组件的渲染、样式与交互问题**，并进一步 **增强 Playground 本地联调能力与补充文档内容**。同时新增公众号二维码入口，并同步修正文档描述与动态占位符相关问题。
+
+**✨ 新功能 Features**
+
+* feat(playground)：新增 `VC_LOCAL` 模式，便于本地调试 `@v-c/*` 包 by @shiqkuangsan [#371](https://github.com/antdv-next/antdv-next/pull/371)
+* feat：新增微信公众号二维码 by @selicens [#380](https://github.com/antdv-next/antdv-next/pull/380)
+
+**🐞 问题修复 Fixes**
+
+* fix：修复 Select 渲染错误 by @aibayanyu20 [#370](https://github.com/antdv-next/antdv-next/pull/370)
+* fix(style)：优化 Link 在 `focus-visible` 状态下的无障碍描边样式 by @darkingtail [#376](https://github.com/antdv-next/antdv-next/pull/376)
+* fix(grid)：为媒体尺寸映射补充 `xxxl` 断点 by @darkingtail [#378](https://github.com/antdv-next/antdv-next/pull/378)
+* fix(form)：移除必选标记中的硬编码 SimSun 字体 by @darkingtail [#377](https://github.com/antdv-next/antdv-next/pull/377)
+* fix(image)：优化预览遮罩的模糊过渡效果与可移动状态下的鼠标样式 by @darkingtail [#375](https://github.com/antdv-next/antdv-next/pull/375)
+* fix：修复 Layout class 重复添加的问题 by @aibayanyu20 [#379](https://github.com/antdv-next/antdv-next/pull/379)
+* fix：修复动态 placeholder 问题 by @Rascal-Coder [#383](https://github.com/antdv-next/antdv-next/pull/383)
+
+**📝 文档更新 Documentation**
+
+* docs(table)：补充 Table props 性能相关文档说明 by @cc-hearts [#373](https://github.com/antdv-next/antdv-next/pull/373)
+* docs：同步并修正文档索引页描述（zh-CN & en-US）by @jauqasx [#374](https://github.com/antdv-next/antdv-next/pull/374)
+
+---
+
+**👏 新贡献者 New Contributors**
+
+感谢以下社区贡献者的首次参与：
+
+* @jauqasx（[#374](https://github.com/antdv-next/antdv-next/pull/374)）
+
+**Full Changelog**
+https://github.com/antdv-next/antdv-next/compare/antdv-next@1.1.4...antdv-next@1.1.5
+
+
 ## V1.1.4
 
 本次版本主要聚焦于 **补充 Menu / Collapse 的 SFC 用法与主题编辑能力**、**修复 Input.Search 与 TreeSelect 的交互与样式问题**，并进一步 **优化 SSR 表现与升级部分工具链依赖**。同时同步修正文档中的若干渲染和兼容性问题。

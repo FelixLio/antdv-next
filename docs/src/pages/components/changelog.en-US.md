@@ -2,6 +2,42 @@
 title: Component Changelog
 ---
 
+## V1.1.5
+
+This release focuses on **fixing rendering, styling, and interaction issues across Select, Layout, Grid, Form, and Image**, while also **improving local Playground debugging and expanding documentation content**. It also adds a WeChat official account QR code entry and includes documentation description updates together with a dynamic placeholder fix.
+
+**✨ Features**
+
+* feat(playground): add `VC_LOCAL` mode for local `@v-c/*` package debugging by @shiqkuangsan in [#371](https://github.com/antdv-next/antdv-next/pull/371)
+* feat: add WeChat official account QR code by @selicens in [#380](https://github.com/antdv-next/antdv-next/pull/380)
+
+**🐞 Fixes**
+
+* fix: fix Select render error by @aibayanyu20 in [#370](https://github.com/antdv-next/antdv-next/pull/370)
+* fix(style): improve Link `focus-visible` outline for accessibility by @darkingtail in [#376](https://github.com/antdv-next/antdv-next/pull/376)
+* fix(grid): add `xxxl` breakpoint to media size mapping by @darkingtail in [#378](https://github.com/antdv-next/antdv-next/pull/378)
+* fix(form): remove hardcoded SimSun font from required mark by @darkingtail in [#377](https://github.com/antdv-next/antdv-next/pull/377)
+* fix(image): improve preview mask blur transition and movable cursor styles by @darkingtail in [#375](https://github.com/antdv-next/antdv-next/pull/375)
+* fix: fix duplicate Layout class application by @aibayanyu20 in [#379](https://github.com/antdv-next/antdv-next/pull/379)
+* fix: fix dynamic placeholder by @Rascal-Coder in [#383](https://github.com/antdv-next/antdv-next/pull/383)
+
+**📝 Documentation**
+
+* docs(table): document Table props performance notes by @cc-hearts in [#373](https://github.com/antdv-next/antdv-next/pull/373)
+* docs: sync and fix index page descriptions (zh-CN & en-US) by @jauqasx in [#374](https://github.com/antdv-next/antdv-next/pull/374)
+
+---
+
+**👏 New Contributors**
+
+Thanks to the following contributor for their first contribution:
+
+* @jauqasx in [#374](https://github.com/antdv-next/antdv-next/pull/374)
+
+**Full Changelog**
+https://github.com/antdv-next/antdv-next/compare/antdv-next@1.1.4...antdv-next@1.1.5
+
+
 ## V1.1.4
 
 This release focuses on **adding SFC usage examples for Menu and Collapse together with a theme editor integration**, **fixing interaction and style issues in Input.Search and TreeSelect**, and **improving SSR performance while upgrading parts of the tooling stack**. It also includes several documentation rendering and compatibility fixes.
