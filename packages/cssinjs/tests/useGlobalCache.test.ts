@@ -61,7 +61,7 @@ describe('useGlobalCache', () => {
     expect(cacheFn2).toHaveBeenCalledTimes(0)
   })
 
-  it('should call onCacheEffect when cache is ready', () => {
+  it('should call onCacheEffect when cache is ready', async () => {
     const prefix = ref('test')
     const keyPath = ref(['effect-test'])
     const cacheFn = () => ({ value: 'effect-value' })
@@ -71,6 +71,8 @@ describe('useGlobalCache', () => {
       return useGlobalCache(prefix, keyPath, cacheFn, undefined, onEffect)
     })
 
+    // onCacheEffect is scheduled as a microtask batch to avoid blocking hydration
+    await Promise.resolve()
     expect(onEffect).toHaveBeenCalled()
   })
 

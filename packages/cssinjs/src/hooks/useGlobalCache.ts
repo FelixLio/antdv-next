@@ -15,6 +15,22 @@ export type ExtractStyle<CacheValue> = (
 ) => [order: number, styleId: string, style: string] | null
 const effectMap = new Map<string, boolean>()
 
+// 批量延迟执行 onCacheEffect，避免 hydration 阶段大量同步 DOM 操作阻塞主线程
+const pendingEffects = new Map<string, () => void>()
+let pendingEffectFlush: Promise<void> | null = null
+
+function scheduleEffect(pathStr: string, fn: () => void) {
+  pendingEffects.set(pathStr, fn)
+  if (!pendingEffectFlush) {
+    pendingEffectFlush = Promise.resolve().then(() => {
+      pendingEffectFlush = null
+      const effects = Array.from(pendingEffects.values())
+      pendingEffects.clear()
+      effects.forEach(effect => effect())
+    })
+  }
+}
+
 /**
  * 延迟移除样式的时间（毫秒）
  * 用于解决 Vue Transition 动画期间样式被过早移除的问题
@@ -212,13 +228,16 @@ export function useGlobalCache<CacheType>(
         })
       }
 
-      // 触发 effect
-      if (!effectMap.has(newPath)) {
-        onCacheEffect?.(cacheContent.value)
+      // 触发 effect（批量异步，避免 hydration 阶段大量同步 DOM 操作）
+      if (onCacheEffect && !effectMap.has(newPath)) {
         effectMap.set(newPath, true)
-        // 微任务清理缓存，可以认为是单次 batch render 中只触发一次 effect
-        Promise.resolve().then(() => {
-          effectMap.delete(newPath)
+        const cachedValue = cacheContent.value
+        scheduleEffect(newPath, () => {
+          onCacheEffect(cachedValue)
+          // 微任务清理，保证单次 batch render 中只触发一次 effect
+          Promise.resolve().then(() => {
+            effectMap.delete(newPath)
+          })
         })
       }
     },
